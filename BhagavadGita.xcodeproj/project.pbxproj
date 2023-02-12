@@ -17,6 +17,8 @@
 		C70AFE022998EE9C00BC155F /* BhagavadGitaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE012998EE9C00BC155F /* BhagavadGitaUITests.swift */; };
 		C70AFE042998EE9C00BC155F /* BhagavadGitaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE032998EE9C00BC155F /* BhagavadGitaUITestsLaunchTests.swift */; };
 		C70AFE122998FE1400BC155F /* BGUtility in Frameworks */ = {isa = PBXBuildFile; productRef = C70AFE112998FE1400BC155F /* BGUtility */; };
+		C70AFE1629993E9B00BC155F /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = C70AFE1529993E9B00BC155F /* SwiftyBeaver */; };
+		C70AFE182999402F00BC155F /* BGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE172999402F00BC155F /* BGLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		C70AFDFD2998EE9C00BC155F /* BhagavadGitaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BhagavadGitaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C70AFE012998EE9C00BC155F /* BhagavadGitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhagavadGitaUITests.swift; sourceTree = "<group>"; };
 		C70AFE032998EE9C00BC155F /* BhagavadGitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhagavadGitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C70AFE172999402F00BC155F /* BGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C70AFE122998FE1400BC155F /* BGUtility in Frameworks */,
+				C70AFE1629993E9B00BC155F /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +110,7 @@
 				C70AFDEA2998EE9C00BC155F /* Persistence.swift */,
 				C70AFDEC2998EE9C00BC155F /* BhagavadGita.xcdatamodeld */,
 				C70AFDE72998EE9C00BC155F /* Preview Content */,
+				C70AFE172999402F00BC155F /* BGLogger.swift */,
 			);
 			path = BhagavadGita;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 			name = BhagavadGita;
 			packageProductDependencies = (
 				C70AFE112998FE1400BC155F /* BGUtility */,
+				C70AFE1529993E9B00BC155F /* SwiftyBeaver */,
 			);
 			productName = BhagavadGita;
 			productReference = C70AFDDE2998EE9A00BC155F /* BhagavadGita.app */;
@@ -229,6 +235,7 @@
 			mainGroup = C70AFDD52998EE9900BC155F;
 			packageReferences = (
 				C70AFE102998FE1400BC155F /* XCRemoteSwiftPackageReference "BGUtility" */,
+				C70AFE1429993E9B00BC155F /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = C70AFDDF2998EE9A00BC155F /* Products */;
 			projectDirPath = "";
@@ -295,6 +302,7 @@
 			files = (
 				C70AFDEE2998EE9C00BC155F /* BhagavadGita.xcdatamodeld in Sources */,
 				C70AFDEB2998EE9C00BC155F /* Persistence.swift in Sources */,
+				C70AFE182999402F00BC155F /* BGLogger.swift in Sources */,
 				C70AFDE42998EE9A00BC155F /* ContentView.swift in Sources */,
 				C70AFDE22998EE9A00BC155F /* BhagavadGitaApp.swift in Sources */,
 			);
@@ -625,6 +633,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		C70AFE1429993E9B00BC155F /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -632,6 +648,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C70AFE102998FE1400BC155F /* XCRemoteSwiftPackageReference "BGUtility" */;
 			productName = BGUtility;
+		};
+		C70AFE1529993E9B00BC155F /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C70AFE1429993E9B00BC155F /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
 		};
 /* End XCSwiftPackageProductDependency section */
 
