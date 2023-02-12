@@ -142,6 +142,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C70AFE072998EE9C00BC155F /* Build configuration list for PBXNativeTarget "BhagavadGita" */;
 			buildPhases = (
+				C70AFE13299905D300BC155F /* SwiftLint */,
 				C70AFDDA2998EE9A00BC155F /* Sources */,
 				C70AFDDB2998EE9A00BC155F /* Frameworks */,
 				C70AFDDC2998EE9A00BC155F /* Resources */,
@@ -265,6 +266,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C70AFE13299905D300BC155F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C70AFDDA2998EE9A00BC155F /* Sources */ = {
