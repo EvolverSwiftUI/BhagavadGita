@@ -19,6 +19,9 @@
 		C70AFE122998FE1400BC155F /* BGUtility in Frameworks */ = {isa = PBXBuildFile; productRef = C70AFE112998FE1400BC155F /* BGUtility */; };
 		C70AFE1629993E9B00BC155F /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = C70AFE1529993E9B00BC155F /* SwiftyBeaver */; };
 		C70AFE182999402F00BC155F /* BGLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE172999402F00BC155F /* BGLogger.swift */; };
+		C70AFE1A29994E4200BC155F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE1929994E4200BC155F /* ContentViewModel.swift */; };
+		C70AFE1D2999549800BC155F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C70AFE1C2999549800BC155F /* Swinject */; };
+		C70AFE1F29995A5600BC155F /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE1E29995A5600BC155F /* Injection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,8 @@
 		C70AFE012998EE9C00BC155F /* BhagavadGitaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhagavadGitaUITests.swift; sourceTree = "<group>"; };
 		C70AFE032998EE9C00BC155F /* BhagavadGitaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BhagavadGitaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C70AFE172999402F00BC155F /* BGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGLogger.swift; sourceTree = "<group>"; };
+		C70AFE1929994E4200BC155F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		C70AFE1E29995A5600BC155F /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			files = (
 				C70AFE122998FE1400BC155F /* BGUtility in Frameworks */,
 				C70AFE1629993E9B00BC155F /* SwiftyBeaver in Frameworks */,
+				C70AFE1D2999549800BC155F /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +117,8 @@
 				C70AFDEC2998EE9C00BC155F /* BhagavadGita.xcdatamodeld */,
 				C70AFDE72998EE9C00BC155F /* Preview Content */,
 				C70AFE172999402F00BC155F /* BGLogger.swift */,
+				C70AFE1929994E4200BC155F /* ContentViewModel.swift */,
+				C70AFE1E29995A5600BC155F /* Injection.swift */,
 			);
 			path = BhagavadGita;
 			sourceTree = "<group>";
@@ -160,6 +168,7 @@
 			packageProductDependencies = (
 				C70AFE112998FE1400BC155F /* BGUtility */,
 				C70AFE1529993E9B00BC155F /* SwiftyBeaver */,
+				C70AFE1C2999549800BC155F /* Swinject */,
 			);
 			productName = BhagavadGita;
 			productReference = C70AFDDE2998EE9A00BC155F /* BhagavadGita.app */;
@@ -236,6 +245,7 @@
 			packageReferences = (
 				C70AFE102998FE1400BC155F /* XCRemoteSwiftPackageReference "BGUtility" */,
 				C70AFE1429993E9B00BC155F /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+				C70AFE1B2999549800BC155F /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = C70AFDDF2998EE9A00BC155F /* Products */;
 			projectDirPath = "";
@@ -300,8 +310,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70AFE1F29995A5600BC155F /* Injection.swift in Sources */,
 				C70AFDEE2998EE9C00BC155F /* BhagavadGita.xcdatamodeld in Sources */,
 				C70AFDEB2998EE9C00BC155F /* Persistence.swift in Sources */,
+				C70AFE1A29994E4200BC155F /* ContentViewModel.swift in Sources */,
 				C70AFE182999402F00BC155F /* BGLogger.swift in Sources */,
 				C70AFDE42998EE9A00BC155F /* ContentView.swift in Sources */,
 				C70AFDE22998EE9A00BC155F /* BhagavadGitaApp.swift in Sources */,
@@ -641,6 +653,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		C70AFE1B2999549800BC155F /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -653,6 +673,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C70AFE1429993E9B00BC155F /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
+		};
+		C70AFE1C2999549800BC155F /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C70AFE1B2999549800BC155F /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 

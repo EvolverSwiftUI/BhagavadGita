@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @StateObject var viewModel = ContentViewModel()
+
     var body: some View {
         Text("Hello, World!")
             .onAppear {
-                let bgLogger: BGLoggerType = BGLogger()
-                bgLogger.debug("Debug Message")
-                bgLogger.error("Error Message")
+//                let bgLogger: BGLoggerType = BGLogger()
+//                bgLogger.debug("Debug Message")
+//                bgLogger.error("Error Message")
+                viewModel.onAppear()
             }
     }
 }
