@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  BhagavadGita
+
+  Created by Sivaramaiah NAKKA on 15/02/23.
+  
+*/
+
+"Bagavad_Gita" = "भगवद गीता";
+
+// ContentView
+"ContentView.Bagavad_Gita_Chapter" = "भगवद गीता अध्याय";
+"ContentView.Bagavad_Gita_Chapter_%@" = "भगवद गीता अध्याय: %@";

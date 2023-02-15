@@ -11,14 +11,20 @@ struct ContentView: View {
 
     @StateObject var viewModel = ContentViewModel()
 
+    var count = "1"
+
     var body: some View {
-        Text("Hello, World!")
-            .onAppear {
-//                let bgLogger: BGLoggerType = BGLogger()
-//                bgLogger.debug("Debug Message")
-//                bgLogger.error("Error Message")
-                viewModel.onAppear()
-            }
+        VStack {
+            Text("Bagavad_Gita")
+            Text("ContentView.Bagavad_Gita_Chapter")
+            Text("ContentView.Bagavad_Gita_Chapter_\(count)")
+        }
+        .onAppear {
+//            let bgLogger: BGLoggerType = BGLogger()
+//            bgLogger.debug("Debug Message")
+//            bgLogger.error("Error Message")
+            viewModel.onAppear()
+        }
     }
 }
 
