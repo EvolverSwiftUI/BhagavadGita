@@ -6,7 +6,7 @@
   
 */
 
-"Bagavad_Gita" = "भगवद गीता";
+"Bagavad_Gita_Title" = "भगवद गीता";
 
 // ContentView
 "ContentView.Bagavad_Gita_Chapter" = "भगवद गीता अध्याय";

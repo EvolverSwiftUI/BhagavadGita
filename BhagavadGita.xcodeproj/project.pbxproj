@@ -23,6 +23,7 @@
 		C70AFE1D2999549800BC155F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C70AFE1C2999549800BC155F /* Swinject */; };
 		C70AFE1F29995A5600BC155F /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE1E29995A5600BC155F /* Injection.swift */; };
 		C7BA95A4299C88EB00738023 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7BA95A6299C88EB00738023 /* Localizable.strings */; };
+		C7EA7FFF299D419C008F7B7A /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7EA7FFE299D419C008F7B7A /* Strings+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		C70AFE1E29995A5600BC155F /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		C7BA95A5299C88EB00738023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C7BA95A7299C902C00738023 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C7EA7FFE299D419C008F7B7A /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				C70AFE172999402F00BC155F /* BGLogger.swift */,
 				C70AFE1929994E4200BC155F /* ContentViewModel.swift */,
 				C70AFE1E29995A5600BC155F /* Injection.swift */,
+				C7EA7FFE299D419C008F7B7A /* Strings+Generated.swift */,
 				C7BA95A6299C88EB00738023 /* Localizable.strings */,
 			);
 			path = BhagavadGita;
@@ -159,6 +162,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C70AFE072998EE9C00BC155F /* Build configuration list for PBXNativeTarget "BhagavadGita" */;
 			buildPhases = (
+				C7D46B72299DC02A00698770 /* SwiftGen */,
 				C70AFE13299905D300BC155F /* SwiftLint */,
 				C70AFDDA2998EE9A00BC155F /* Sources */,
 				C70AFDDB2998EE9A00BC155F /* Frameworks */,
@@ -309,6 +313,24 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		C7D46B72299DC02A00698770 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftgen\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -322,6 +344,7 @@
 				C70AFE1A29994E4200BC155F /* ContentViewModel.swift in Sources */,
 				C70AFE182999402F00BC155F /* BGLogger.swift in Sources */,
 				C70AFDE42998EE9A00BC155F /* ContentView.swift in Sources */,
+				C7EA7FFF299D419C008F7B7A /* Strings+Generated.swift in Sources */,
 				C70AFDE22998EE9A00BC155F /* BhagavadGitaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
