@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "bgutility",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EvolverSwiftUI/BGUtility.git",
+      "state" : {
+        "revision" : "2580c1ad95a5eeaab3f2e7737bf452d392d33711",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftybeaver",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyBeaver/SwiftyBeaver.git",
+      "state" : {
+        "revision" : "12b5acf96d98f91d50de447369bd18df74600f1a",
+        "version" : "1.9.6"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "8bc503e60965298984fb58cf47b71c541449fe2a",
+        "version" : "2.8.3"
+      }
+    }
+  ],
+  "version" : 2
+}
