@@ -10,40 +10,42 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
-  /// Localizable.strings
-  ///   BhagavadGita
-  /// 
-  ///   Created by Sivaramaiah NAKKA on 15/02/23.
-  internal static let bagavadGitaTitle = L10n.tr("Localizable", "Bagavad_Gita_Title", fallback: "Bagavad Gita")
-  internal enum ContentView {
-    /// Bagavad Gita Chapter
-    internal static let bagavadGitaChapter = L10n.tr("Localizable", "ContentView.Bagavad_Gita_Chapter", fallback: "Bagavad Gita Chapter")
-    /// Bagavad Gita Chapter: %@
-    internal static func bagavadGitaChapter(_ p1: Any) -> String {
-      return L10n.tr("Localizable", "ContentView.Bagavad_Gita_Chapter_%@", String(describing: p1), fallback: "Bagavad Gita Chapter: %@")
+    /// Localizable.strings
+    ///   BhagavadGita
+    ///
+    ///   Created by Sivaramaiah NAKKA on 15/02/23.
+    internal static let bagavadGitaTitle = L10n.tr("Localizable", "Bagavad_Gita_Title", fallback: "Bagavad Gita")
+    internal enum ContentView {
+        /// Bagavad Gita Chapter
+        internal static let bagavadGitaChapter = L10n.tr("Localizable", "ContentView.Bagavad_Gita_Chapter", fallback: "Bagavad Gita Chapter")
+        /// Bagavad Gita Chapter: %@
+        internal static func bagavadGitaChapter(_ p1: Any) -> String {
+            L10n.tr("Localizable", "ContentView.Bagavad_Gita_Chapter_%@", String(describing: p1), fallback: "Bagavad Gita Chapter: %@")
+        }
     }
-  }
 }
+
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
 
 // MARK: - Implementation Details
 
 extension L10n {
-  private static func tr(_ table: String, _ key: String, _ args: CVarArg..., fallback value: String) -> String {
-    let format = BundleToken.bundle.localizedString(forKey: key, value: value, table: table)
-    return String(format: format, locale: Locale.current, arguments: args)
-  }
+    private static func tr(_ table: String, _ key: String, _ args: CVarArg..., fallback value: String) -> String {
+        let format = BundleToken.bundle.localizedString(forKey: key, value: value, table: table)
+        return String(format: format, locale: Locale.current, arguments: args)
+    }
 }
 
 // swiftlint:disable convenience_type
 private final class BundleToken {
-  static let bundle: Bundle = {
-    #if SWIFT_PACKAGE
-    return Bundle.module
-    #else
-    return Bundle(for: BundleToken.self)
-    #endif
-  }()
+    static let bundle: Bundle = {
+        #if SWIFT_PACKAGE
+            return Bundle.module
+        #else
+            return Bundle(for: BundleToken.self)
+        #endif
+    }()
 }
+
 // swiftlint:enable convenience_type

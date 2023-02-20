@@ -12,7 +12,6 @@ import Foundation
 // 3. DI with dependency injection container
 
 class ContentViewModel: ObservableObject {
-
     @Injected private var logger: BGLoggerType
 //    private var logger: BGLoggerType = Injection.shared.container.resolve(BGLoggerType.self)!
 

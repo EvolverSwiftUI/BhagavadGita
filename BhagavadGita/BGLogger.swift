@@ -36,16 +36,14 @@ extension BGLoggerType {
     func error(_ message: String, _ file: String = #file, _ function: String = #function, line: Int = #line) {
         error(message, file, function, line: line)
     }
-
 }
 
 class BGLogger: BGLoggerType {
-
     private let log: SwiftyBeaver.Type = {
         let log = SwiftyBeaver.self
 
         // add log destinations. at least one is needed!
-        let console = ConsoleDestination()  // log to Xcode Console
+        let console = ConsoleDestination() // log to Xcode Console
         log.addDestination(console)
 
         return log
@@ -76,5 +74,4 @@ class BGLogger: BGLoggerType {
 //    log.info("a nice information")   // prio 3, INFO in blue
 //    log.warning("oh no, that won’t be good")  // prio 4, WARNING in yellow
 //    log.error("ouch, an error did occur!")  // prio 5, ERROR in red
-
 }
