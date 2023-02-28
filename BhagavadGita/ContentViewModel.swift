@@ -21,5 +21,7 @@ class ContentViewModel: ObservableObject {
 
     func onAppear() {
         logger.info("View is loadded.")
+        logger.info(API.baseURL)
+        print(ConfigurationManager.environment)
     }
 }
