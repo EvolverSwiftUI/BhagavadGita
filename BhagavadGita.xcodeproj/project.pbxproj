@@ -22,6 +22,9 @@
 		C70AFE1A29994E4200BC155F /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE1929994E4200BC155F /* ContentViewModel.swift */; };
 		C70AFE1D2999549800BC155F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = C70AFE1C2999549800BC155F /* Swinject */; };
 		C70AFE1F29995A5600BC155F /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AFE1E29995A5600BC155F /* Injection.swift */; };
+		C7318A8529B0DE4A00E0B340 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C7318A8429B0DE4A00E0B340 /* FirebaseAnalytics */; };
+		C7318A8729B0DE4A00E0B340 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = C7318A8629B0DE4A00E0B340 /* FirebaseCrashlytics */; };
+		C7318A8B29B0E12700E0B340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7318A8A29B0E12700E0B340 /* AppDelegate.swift */; };
 		C7A1B95229AD1035003C33EF /* BhagavadGita-Dev.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C7A1B95129AD1035003C33EF /* BhagavadGita-Dev.xcconfig */; };
 		C7A1B95529AD1067003C33EF /* BhagavadGita-Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C7A1B95429AD1067003C33EF /* BhagavadGita-Prod.xcconfig */; };
 		C7A1B95729AD108B003C33EF /* BhagavadGita-QA.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C7A1B95629AD108B003C33EF /* BhagavadGita-QA.xcconfig */; };
@@ -63,6 +66,8 @@
 		C70AFE172999402F00BC155F /* BGLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGLogger.swift; sourceTree = "<group>"; };
 		C70AFE1929994E4200BC155F /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		C70AFE1E29995A5600BC155F /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		C7318A8A29B0E12700E0B340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C7318A9E29B0FB3400E0B340 /* Firebase */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Firebase; sourceTree = "<group>"; };
 		C7A1B95129AD1035003C33EF /* BhagavadGita-Dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BhagavadGita-Dev.xcconfig"; sourceTree = "<group>"; };
 		C7A1B95429AD1067003C33EF /* BhagavadGita-Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BhagavadGita-Prod.xcconfig"; sourceTree = "<group>"; };
 		C7A1B95629AD108B003C33EF /* BhagavadGita-QA.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "BhagavadGita-QA.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +85,8 @@
 			files = (
 				C70AFE122998FE1400BC155F /* BGUtility in Frameworks */,
 				C70AFE1629993E9B00BC155F /* SwiftyBeaver in Frameworks */,
+				C7318A8729B0DE4A00E0B340 /* FirebaseCrashlytics in Frameworks */,
+				C7318A8529B0DE4A00E0B340 /* FirebaseAnalytics in Frameworks */,
 				C70AFE1D2999549800BC155F /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,6 +131,8 @@
 		C70AFDE02998EE9A00BC155F /* BhagavadGita */ = {
 			isa = PBXGroup;
 			children = (
+				C7318A8A29B0E12700E0B340 /* AppDelegate.swift */,
+				C7318A9E29B0FB3400E0B340 /* Firebase */,
 				C7A1B95829AD1295003C33EF /* Info.plist */,
 				C7A1B95029AD0FFB003C33EF /* Configurations */,
 				C70AFDE12998EE9A00BC155F /* BhagavadGitaApp.swift */,
@@ -184,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C70AFE072998EE9C00BC155F /* Build configuration list for PBXNativeTarget "BhagavadGita" */;
 			buildPhases = (
+				C7318A9229B0E9FE00E0B340 /* Firebase */,
 				C7D46B72299DC02A00698770 /* SwiftGen */,
 				C70AFE13299905D300BC155F /* SwiftLint */,
 				C70AFDDA2998EE9A00BC155F /* Sources */,
@@ -200,6 +210,8 @@
 				C70AFE112998FE1400BC155F /* BGUtility */,
 				C70AFE1529993E9B00BC155F /* SwiftyBeaver */,
 				C70AFE1C2999549800BC155F /* Swinject */,
+				C7318A8429B0DE4A00E0B340 /* FirebaseAnalytics */,
+				C7318A8629B0DE4A00E0B340 /* FirebaseCrashlytics */,
 			);
 			productName = BhagavadGita;
 			productReference = C70AFDDE2998EE9A00BC155F /* BhagavadGita.app */;
@@ -278,6 +290,7 @@
 				C70AFE102998FE1400BC155F /* XCRemoteSwiftPackageReference "BGUtility" */,
 				C70AFE1429993E9B00BC155F /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 				C70AFE1B2999549800BC155F /* XCRemoteSwiftPackageReference "Swinject" */,
+				C7318A8329B0DE4A00E0B340 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = C70AFDDF2998EE9A00BC155F /* Products */;
 			projectDirPath = "";
@@ -339,6 +352,24 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		C7318A9229B0E9FE00E0B340 /* Firebase */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Firebase;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to Dev, QA and Prod versions of the GoogleService-Info.plist\n# NOTE: these should only live on the file system and should NOT be part of the target\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_QA=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Qa/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Prod/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the Dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ] \nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi    \n\n# Make sure the QA version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_QA}\"\nif [ ! -f $GOOGLESERVICE_INFO_QA ] \nthen\n    echo \"No QA GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi   \n\n# Make sure the Prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ] \nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination locaton for the GoogleService-Info.plist\nPLIST_DESTINATION = ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Debug-Prod\" ]\nthen\necho \"Using ${GOOGLESERVICE_INFO_PROD}\"\ncp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelif [ \"${CONFIGURATION}\" == \"Debug-QA\" ]\nthen\necho \"Using ${GOOGLESERVICE_INFO_QA}\"\ncp \"${GOOGLESERVICE_INFO_QA}\" \"${PLIST_DESTINATION}\"\nelse\necho \"Using ${GOOGLESERVICE_INFO_DEV}\"\ncp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n\n";
+		};
 		C7441F0F29A26204008ACE91 /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
@@ -390,6 +421,7 @@
 				C70AFE182999402F00BC155F /* BGLogger.swift in Sources */,
 				C70AFDE42998EE9A00BC155F /* ContentView.swift in Sources */,
 				C7EA7FFF299D419C008F7B7A /* Strings+Generated.swift in Sources */,
+				C7318A8B29B0E12700E0B340 /* AppDelegate.swift in Sources */,
 				C70AFDE22998EE9A00BC155F /* BhagavadGitaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1268,6 +1300,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		C7318A8329B0DE4A00E0B340 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1285,6 +1325,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C70AFE1B2999549800BC155F /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		C7318A8429B0DE4A00E0B340 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7318A8329B0DE4A00E0B340 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C7318A8629B0DE4A00E0B340 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7318A8329B0DE4A00E0B340 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 

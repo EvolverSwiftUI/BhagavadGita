@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct BhagavadGitaApp: App {
+    
+    // register app delegate for Firebase setup
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
