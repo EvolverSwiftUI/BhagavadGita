@@ -6,6 +6,7 @@
 //
 
 import Foundation
+//import Firebase
 
 // 1. Singleton
 // 2. DI with constructor injection
@@ -23,5 +24,7 @@ class ContentViewModel: ObservableObject {
         logger.info("View is loadded.")
         logger.info(API.baseURL)
         print(ConfigurationManager.environment)
+        //Analytics.logEvent("onboarding_test", parameters: [:])
+        FirebaseAnalyticsManager.shared.logEvent(name: "onboarding_test", param: [:])
     }
 }
