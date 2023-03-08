@@ -14,6 +14,8 @@ import Foundation
 
 class ContentViewModel: ObservableObject {
     @Injected private var logger: BGLoggerType
+    @Injected private var analyticsManager: AnalyticsManagerProtocol
+    
 //    private var logger: BGLoggerType = Injection.shared.container.resolve(BGLoggerType.self)!
 
 //    init(logger: BGLoggerType = BGLogger()) {
@@ -25,6 +27,10 @@ class ContentViewModel: ObservableObject {
         logger.info(API.baseURL)
         print(ConfigurationManager.environment)
         //Analytics.logEvent("onboarding_test", parameters: [:])
-        FirebaseAnalyticsManager.shared.logEvent(name: "onboarding_test", param: [:])
-    }
+        //FirebaseAnalyticsManager.shared.logEvent(name: "onboarding_test_1", param: [:])
+        //analyticsManager.logEvent(event: Event(name: "onboarding_test_2")) // struct used
+        analyticsManager.logEvent(event: AnalyticsEvent.clickButtonEvent) // enum used
+        analyticsManager.logEvent(event: AnalyticsEvent.chapterTapped(name: "chapter 9")) // enum used
+        analyticsManager.logEvent(event: OnboardingEvent.clickButtonEvent) // enum used
+   }
 }
